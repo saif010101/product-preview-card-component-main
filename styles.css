@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+* {
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+    border : none;
+}
+
+:root {
+
+    --primary-green-500: hsl(158, 36%, 37%);
+    --primary-green-700: hsl(158, 42%, 18%);
+
+    --ntr-black: hsl(212, 21%, 14%);
+    --ntr-grey: hsl(228, 12%, 48%);
+    --ntr-cream: hsl(30, 38%, 92%);
+    --ntr-white: hsl(0, 0%, 100%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+
+    height : 100vh;
+
+    background-color: var(--ntr-cream);
+}
+
+main {
+    display: grid;
+    border-radius: 0.75rem;
+
+    margin: 1.5rem 1rem;
+    overflow: hidden;
+
+    background-color: var(--ntr-white);
+
+    max-width: 600px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.content {
+    padding : 1.5rem 2rem;
+    display : flex;
+    flex-direction: column;
+    gap : 1.75rem;
+}
+
+.content_category {
+    color : var(--ntr-grey);
+    
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .3rem;
+    font-family: 'Montserrat',sans-serif;
+}
+
+.content h1 {
+    color : var(--ntr-black);
+
+    line-height: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Fraunces',sans-serif;
+}
+
+.content_description {
+    line-height: 1.4rem;
+    color : var(--ntr-grey);
+
+    font-weight: 500;
+    font-size: 14px;
+    font-family: 'Montserrat',sans-serif;
+}
+
+.priceTag {
+    display: flex;
+    gap : 1.2rem;
+    align-items: center;
+
+    font-family: 'Fraunces',sans-serif;
+}
+
+.priceTag_currPrice {
+    font-size : 2rem;
+    font-weight: 700;
+    
+    color : var(--primary-green-500);
+}
+
+.priceTag_origPrice > s {
+    font-size: 14px;
+    font-weight: 500;
+
+    color : var(--ntr-grey);
+
+    font-family: 'Montserrat',sans-serif;
+}
+
+.content button {
+    padding : 1rem 0;
+    border-radius: 0.5rem;
+
+    background-color: var(--primary-green-500);
+
+    color : var(--ntr-white);
+
+    font-weight: 700;
+    font-size: 0.9rem;
+    font-family: 'Montserrat',sans-serif;
+
+}
+
+.content button:hover {
+    background-color: var(--primary-green-700);
+}
+
+
+
+
+/* responsive design */
+
+@media (min-width : 600px) {
+    body {
+        align-items: center;
+    }
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
